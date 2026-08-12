@@ -316,7 +316,6 @@ export type Analyst = {
   name: string;
   role: string;
   focus: string;
-  since: string;
   bio: string;
   languages: string;
   photo?: string;
@@ -327,24 +326,21 @@ export const investmentTeam: Analyst[] = [
     name: "Antonio Casari",
     role: "Senior Analyst",
     focus: "European High Yield Credit",
-    since: "2013",
-    bio: "Antonio covers fundamental credit across the European high-yield market. Before joining Northlight in 2013, he spent four years in financing and capital markets at Investindustrial and worked as a fundamental credit analyst at Magnetar Capital, following nearly a decade at Lehman Brothers, where he was a Director in Leveraged Finance and M&A. He holds a degree in Economics from the University of Bologna.",
+    bio: "Antonio previously worked at Lehman Brothers, Magnetar Capital and Investindustrial.",
     languages: "Speaks English and Italian.",
   },
   {
     name: "Elizabeth Rasskazova",
     role: "Senior Analyst",
     focus: "European High Yield Credit",
-    since: "2020",
-    bio: "Elizabeth specialises in distressed and special-situations credit. Before joining Northlight in 2020, she spent over five years at Polygon Global Partners, latterly as a portfolio manager, and previously worked in Goldman Sachs's Special Situations Group. She holds an MA in Economics from the University of Cambridge and an MSc in Finance from the London School of Economics.",
+    bio: "Elizabeth previously worked at Polygon Partners and in Goldman Sachs's Special Situations Group.",
     languages: "Speaks English, Russian, German, French and Italian.",
   },
   {
     name: "Katerina Tchakalski",
     role: "Senior Analyst",
     focus: "European High Yield Credit",
-    since: "2024",
-    bio: "Katerina specialises in high-yield and leveraged-finance credit. Before joining Northlight in 2024, she spent almost six years as a senior analyst at BlackRock, following roles in financial restructuring and investment banking at Houlihan Lokey, Bank of America and Société Générale. She holds an MBA in Finance from The Wharton School and a BA in Economics from the University of Chicago.",
+    bio: "Katerina previously worked at BlackRock, Houlihan Lokey, Bank of America and Société Générale.",
     languages: "Speaks English, French and Italian.",
   },
 ];

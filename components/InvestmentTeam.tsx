@@ -33,7 +33,6 @@ export function InvestmentTeam() {
                 <p className="mt-1 text-[13px] font-semibold uppercase tracking-[0.06em] text-steeldeep">
                   {m.role} · {m.focus}
                 </p>
-                <p className="mt-1 text-[13px] text-muted">At Northlight since {m.since}</p>
               </div>
               <span
                 className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border text-[17px] font-normal leading-none transition-all duration-500 ${
