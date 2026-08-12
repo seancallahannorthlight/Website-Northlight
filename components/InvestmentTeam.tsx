@@ -58,12 +58,6 @@ export function InvestmentTeam() {
                   }`}
                 >
                   <p className="max-w-4xl text-[15px] leading-relaxed text-inksoft">{m.bio}</p>
-                  <p className="mt-4 text-[13px] text-inksoft">
-                    <span className="font-semibold uppercase tracking-[0.12em] text-steeldeep">
-                      Languages
-                    </span>{" "}
-                    — {m.languages}
-                  </p>
                 </div>
               </div>
             </div>

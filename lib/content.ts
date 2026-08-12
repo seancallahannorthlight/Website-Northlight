@@ -311,37 +311,34 @@ export const team: TeamMember[] = [
 ];
 
 // The wider investment (research) team — shown below the founding partners.
-// Bios composed from the firm org chart (primary) + public LinkedIn (supplementary).
+// Bios taken from the firm's Biographies deck, with the opening "X is a Senior
+// Research Analyst at Northlight Group" sentence dropped (languages included).
 export type Analyst = {
   name: string;
   role: string;
   focus: string;
   bio: string;
-  languages: string;
   photo?: string;
 };
 
 export const investmentTeam: Analyst[] = [
   {
     name: "Antonio Casari",
-    role: "Senior Analyst",
+    role: "Senior Research Analyst",
     focus: "European High Yield Credit",
-    bio: "Antonio previously worked at Lehman Brothers, Magnetar Capital and Investindustrial.",
-    languages: "Speaks English and Italian.",
+    bio: "Prior to joining Northlight in 2013, Antonio worked at Investindustrial (2009–2013), one of Southern Europe's leading investment groups, where he was responsible for capital markets and financing and raised in excess of €1.5bn across high yield and leveraged loans. At Magnetar Capital (2007–2009), Antonio co-promoted and ran the European fundamental credit strategy, focusing on credit analysis and monitoring of investments. He has also worked with Lehman Brothers (1998–2007) as a member of the leveraged finance and M&A teams. Antonio holds a degree in Economics from the University of Bologna. He is fluent in English and Italian.",
   },
   {
     name: "Elizabeth Rasskazova",
-    role: "Senior Analyst",
+    role: "Senior Research Analyst",
     focus: "European High Yield Credit",
-    bio: "Elizabeth previously worked at Polygon Partners and in Goldman Sachs's Special Situations Group.",
-    languages: "Speaks English, Russian, German, French and Italian.",
+    bio: "Prior to joining Northlight in 2020, Elizabeth was a Portfolio Manager with Polygon Partners (2013–2019), focusing on distressed and event-driven credit investing. Elizabeth started her career at Goldman Sachs European Special Situations Group in 2005. She holds graduate degrees in Economics and Finance from the University of Cambridge and the London School of Economics. A native Russian speaker, Elizabeth is fluent in English and German and also speaks French and Italian.",
   },
   {
     name: "Katerina Tchakalski",
-    role: "Senior Analyst",
+    role: "Senior Research Analyst",
     focus: "European High Yield Credit",
-    bio: "Katerina previously worked at BlackRock, Houlihan Lokey, Bank of America and Société Générale.",
-    languages: "Speaks English, French and Italian.",
+    bio: "Prior to joining Northlight in 2024, Katerina was a Senior Research Analyst at BlackRock (2018–2024), focusing on leveraged credit investments in the healthcare, paper-packaging and utilities sectors. Prior to that, Katerina spent a decade working in investment banking. The positions she held included restructuring banker at Houlihan Lokey, leveraged finance banker at Barclays and Bank of America Merrill Lynch, and M&A banker at Société Générale. She holds an undergraduate degree in Economics from the University of Chicago and an MBA from The Wharton School at the University of Pennsylvania. Katerina is fluent in English and French and speaks basic Italian.",
   },
 ];
 
