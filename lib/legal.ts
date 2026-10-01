@@ -3,13 +3,15 @@
 
 export type Block =
   | { type: "p"; text: string }
-  | { type: "h"; text: string }
+  | { type: "h"; text: string; level?: 3 }
   | { type: "ul"; items: string[] }
-  | { type: "dl"; rows: { term: string; def: string }[] };
+  | { type: "dl"; rows: { term: string; def: string }[] }
+  | { type: "table"; head: string[]; rows: string[][]; total?: string[] };
 
 export type LegalDoc = {
   slug: string;
   title: string;
+  subtitle?: string;
   updated?: string;
   blocks: Block[];
 };
@@ -44,6 +46,50 @@ const sfdrDisclosure: LegalDoc = {
     {
       type: "p",
       text: "All funds of Northlight Group are managed taking environmental, social, and governance (“ESG”) factors into account as the Portfolio Manager considers that ESG issues can influence investment risk and return. Unless otherwise specified in a fund’s documentation, our funds do not promote environmental or social characteristics or have specific sustainable investment objectives. This means that whilst ESG risks and factors are considered, they may or may not impact the portfolio construction and investment decisions of the different investment teams.",
+    },
+  ],
+};
+
+const mifidpru8Disclosure: LegalDoc = {
+  slug: "mifidpru-8-disclosure",
+  title: "MIFIDPRU 8 Disclosure",
+  subtitle: "Covering the remuneration period 01/01/2025 to 31/12/2025 (“Remuneration Period”) – Published 03/09/2026",
+  blocks: [
+    { type: "p", text: "Northlight Group LLP is authorised and regulated by the Financial Conduct Authority (the “FCA”). The Firm is a UK domiciled discretionary investment manager to professional clients, regulated and unregulated collective investment schemes. The Firm conducts agency business and does not operate a trading book or hold client money or assets. Northlight is dual-regulated by the FCA under the ‘Markets in Financial Instruments Directive’ (“MiFID”) and the ‘Alternative Investment Fund Managers Directive’ (“AIFMD”) as a Collective Portfolio Management Investment Firm (“CPMI Firm”) and so it is subject to FCA Rules on remuneration. The Firm is classified as a “Small and Non-Interconnected Investment Firm” (“SNI Firm”) and so makes this disclosure in accordance with the requirements contained within MIFIDPRU 8.6. The relevant rules and guidance for the Firm’s remuneration code is contained within the FCA’s SYSC Sourcebook of the FCA’s Handbook." },
+    { type: "p", text: "CPMI firms are required to make a remuneration disclosure in respect of the whole of their business, i.e. MiFID and AIFMD. As a CPMI Firm, Northlight is subject to the Remuneration Code contained at SYSC 19B for the AIFM business and those sections of SYSC 19G relevant to an SNI Firm for the non-AIFM business. The disclosure requirements have been prepared in line with both remuneration codes under SYSC 19B and SYSC 19G. The remuneration policy includes the most stringent requirements of each Remuneration Code." },
+    { type: "h", text: "Proportionality" },
+    { type: "p", text: "The Firm has determined the Remuneration policy’s compliance with the principles scheduled in SYSC 19B.1.5 to 19B.1.24 inclusive and in accordance with the relevant requirements in SYSC 19G in a way which is appropriate to its size, internal organisation and the nature, scope and complexity of its business model and activities." },
+    { type: "h", text: "Application of the Requirements" },
+    { type: "p", text: "This disclosure is made annually on the date the Firm publishes its annual financial statements. As appropriate, this disclosure is made more frequently, for example if there is a major change to the Firm’s business model." },
+    { type: "h", text: "Remuneration Policies and Practices" },
+    { type: "p", text: "The Remuneration Code (the “Code”) covers an individual’s total remuneration — fixed and variable. The Firm incentivises staff through a combination of the two." },
+    { type: "p", text: "This disclosure sets out qualitative and quantitative information on the Firm’s remuneration processes and practices." },
+    { type: "h", text: "A. Qualitative Information", level: 3 },
+    { type: "p", text: "The Firm must establish, implement and maintain remuneration policies, procedures and practices that are consistent with and promote effective risk management and do not encourage excessive risk taking." },
+    { type: "p", text: "The Firm ensures that the remuneration policy and its practical application are consistent with the Firm’s business strategy, objectives and long-term interests." },
+    { type: "p", text: "Given the nature and small size of our business, remuneration for all employees is set by the Senior Management of the Firm. Staff receive a salary which reflects their market value, responsibilities and experience. All staff may also receive variable remuneration, such as an annual bonus, where the individual operates within the risk appetite of the company and has demonstrated appropriate behaviour." },
+    { type: "p", text: "Variable remuneration is intended to reflect contribution to the Firm’s overall success. Staff are assessed throughout the year and rated based on company and individual performance. The performance assessment considers both financial measures and non-financial measures such as productivity/efficiency and quality, risk management, people and culture, customer focus and growth and innovation." },
+    { type: "p", text: "The Firm’s linkage between variable remuneration and performance is based upon the following tenets:" },
+    {
+      type: "ul",
+      items: [
+        "Attraction and retention of staff members",
+        "Link a proportion of a staff member’s total compensation to the Firm’s performance",
+        "Discourage excessive risk-taking",
+        "Ensure client interests are not negatively impacted",
+      ],
+    },
+    { type: "p", text: "Aligning the interest of senior staff members via long-term incentive awards does not currently apply." },
+    { type: "h", text: "B. Quantitative Information", level: 3 },
+    { type: "p", text: "With respect to the financial year ending 31st December 2025 the total amount of remuneration awarded to all staff, including the split of fixed and variable remuneration, was as follows:" },
+    {
+      type: "table",
+      head: ["", "GBP"],
+      rows: [
+        ["Fixed remuneration", "900,508"],
+        ["Variable remuneration", "1,325,353"],
+      ],
+      total: ["Total", "2,225,861"],
     },
   ],
 };
@@ -386,6 +432,7 @@ const emailDisclaimer: LegalDoc = {
 export const legalDocs: LegalDoc[] = [
   ukStewardshipCode,
   sfdrDisclosure,
+  mifidpru8Disclosure,
   privacyPolicy,
   financialPromotions,
   emailDisclaimer,

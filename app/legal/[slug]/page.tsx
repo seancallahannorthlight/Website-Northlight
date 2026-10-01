@@ -54,6 +54,9 @@ export default function LegalPage({ params }: { params: { slug: string } }) {
           {/* Document */}
           <article className="min-w-0 max-w-prose">
             <h1 className="text-3xl text-ink md:text-[38px]">{doc.title}</h1>
+            {doc.subtitle && (
+              <p className="mt-3 text-[15px] italic leading-relaxed text-muted">{doc.subtitle}</p>
+            )}
             {doc.updated && (
               <p className="mt-3 text-[13px] font-medium uppercase tracking-[0.12em] text-muted">
                 Last updated · {doc.updated}
@@ -61,6 +64,13 @@ export default function LegalPage({ params }: { params: { slug: string } }) {
             )}
             <div className="mt-8 space-y-5">
               {doc.blocks.map((block, i) => {
+                if (block.type === "h" && block.level === 3) {
+                  return (
+                    <h3 key={i} className="!mt-8 text-lg text-ink">
+                      {block.text}
+                    </h3>
+                  );
+                }
                 if (block.type === "h") {
                   return (
                     <h2 key={i} className="!mt-10 text-xl text-ink first:!mt-0">
@@ -88,6 +98,48 @@ export default function LegalPage({ params }: { params: { slug: string } }) {
                         </li>
                       ))}
                     </ul>
+                  );
+                }
+                if (block.type === "table") {
+                  const numeric = (c: string) => /^[\d,.()%\-–\s]+$/.test(c);
+                  return (
+                    <div key={i} className="overflow-x-auto border border-line">
+                      <table className="w-full text-[15px]">
+                        <thead className="bg-mist2">
+                          <tr>
+                            {block.head.map((c, j) => (
+                              <th
+                                key={j}
+                                className={`px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-inksoft ${
+                                  j > 0 ? "text-right" : "text-left"
+                                }`}
+                              >
+                                {c}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {[...block.rows, ...(block.total ? [block.total] : [])].map((row, j) => {
+                            const isTotal = block.total && j === block.rows.length;
+                            return (
+                              <tr key={j} className="border-t border-line">
+                                {row.map((c, k) => (
+                                  <td
+                                    key={k}
+                                    className={`px-4 py-3 ${
+                                      k > 0 || numeric(c) ? "text-right tabular-nums" : "text-left"
+                                    } ${isTotal ? "font-semibold text-ink" : "text-inksoft"}`}
+                                  >
+                                    {c}
+                                  </td>
+                                ))}
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
                   );
                 }
                 // dl — purpose / lawful basis pairs
