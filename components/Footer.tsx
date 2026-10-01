@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <Logo className="h-6 w-auto text-white" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed">
-              A London-based investment manager specialising in European credit since 2009.
+              A London-based investment manager specialising in European corporate credit since 2009.
             </p>
             <address className="mt-5 text-sm not-italic leading-relaxed">
               {firm.address.map((line) => (
