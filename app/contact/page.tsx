@@ -1,13 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import dynamic from "next/dynamic";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow, ArrowRight } from "@/components/ui";
 import { firm } from "@/lib/content";
 
-// Leaflet needs the browser — load the map client-side only.
-const LocationMap = dynamic(() => import("@/components/LocationMap"), { ssr: false });
+import LocationMap from "@/components/LocationMap";
 
 // Formspree endpoint — delivers submissions to Investor Relations.
 const FORM_ENDPOINT = "https://formspree.io/f/xvzjwzbd";
