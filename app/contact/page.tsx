@@ -8,7 +8,7 @@ import { firm } from "@/lib/content";
 import LocationMap from "@/components/LocationMap";
 
 // Formspree endpoint — delivers submissions to Investor Relations.
-const FORM_ENDPOINT = "https://formspree.io/f/xvzjwzbd";
+const FORM_ENDPOINT = "https://formspree.io/f/xeaowqby";
 
 type Status = "idle" | "submitting" | "sent" | "error";
 
