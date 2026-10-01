@@ -36,7 +36,7 @@ export default function AboutPage() {
                 liquidity-adjusted risk and return.
               </p>
               <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-inksoft">
-                The team invests across the entire credit spectrum, with its primary focus on the
+                The team invests across the entire corporate credit spectrum, with its primary focus on the
                 European high-yield markets. The firm seeks to generate consistent, positive and
                 uncorrelated returns across all market environments, with an emphasis on liquidity
                 and capital preservation.

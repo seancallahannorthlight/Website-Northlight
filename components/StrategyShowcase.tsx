@@ -338,7 +338,7 @@ export function StrategyShowcase() {
           <Reveal>
             <Kicker>More ways to invest with us</Kicker>
             <h2 className="mt-4 font-serif text-3xl text-ink md:text-[34px]">
-              The same philosophy, other vehicles
+              The same investment philosophy, different investment vehicles
             </h2>
             <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-inksoft">
               The flagship approach, expressed in structures designed for different investors and

@@ -195,7 +195,7 @@ export const strategies: Strategy[] = [
     name: "Northlight European Fundamental Credit Fund",
     structure: "Long / short",
     summary:
-      "Our flagship strategy — a long/short book across European credit, run for consistent, positive returns with a firm emphasis on capital preservation.",
+      "Our flagship strategy — a long/short book across European credit, seeking consistent, positive returns with a firm emphasis on capital preservation.",
     headline: { label: "Focus", value: "Absolute, uncorrelated returns" },
     meta: [
       { label: "Structure", value: "Cayman" },
@@ -207,7 +207,7 @@ export const strategies: Strategy[] = [
       "Idiosyncratic, catalyst-driven opportunities sourced bottom-up",
       "Systematic macro-overlay intended to preserve capital",
       "Balanced long and short — roughly two-thirds long, one-third short",
-      "Positive calendar-year performance in 15 of the last 16 years",
+      "Positive calendar-year performance in 15 of the last 16 years (USD I share class)",
       "Historically lower drawdowns than the European High Yield market",
     ],
   },
@@ -218,7 +218,7 @@ export const strategies: Strategy[] = [
     name: "MFM Northlight European Credit Opportunities Fund",
     structure: "Long / short",
     summary:
-      "The flagship philosophy in a regulated, onshore UCITS wrapper — the same fundamental, event-driven approach, more widely accessible.",
+      "The flagship investment philosophy in a regulated, onshore UCITS wrapper — the same fundamental, event-driven approach, more widely accessible.",
     headline: { label: "Target", value: "High single-digit returns" },
     meta: [
       { label: "Structure", value: "UCITS" },
@@ -227,7 +227,7 @@ export const strategies: Strategy[] = [
       { label: "Target", value: "High single-digit returns" },
     ],
     points: [
-      "The flagship philosophy delivered in a regulated UCITS structure",
+      "The flagship investment philosophy delivered in a regulated UCITS structure",
       "Primarily bonds, with the same fundamental, event-driven approach",
       "Daily position transparency",
       "Suitable for investors requiring a regulated European vehicle",
@@ -274,7 +274,7 @@ export const strategies: Strategy[] = [
     name: "Co-Investments",
     structure: "By invitation",
     summary:
-      "The team's highest-conviction ideas, offered selectively to aligned investors alongside the funds.",
+      "The team's highest-conviction ideas, offered to investors alongside the funds.",
     headline: { label: "Approach", value: "Concentrated & high-conviction" },
     meta: [
       { label: "Horizon", value: "Multi-year" },

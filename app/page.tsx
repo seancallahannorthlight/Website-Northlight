@@ -56,8 +56,8 @@ export default function HomePage() {
               A London-based investment manager specialising in European corporate credit.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#D2DCE5]">
-              Consistent, positive and uncorrelated returns through every market environment — with an
-              emphasis on liquidity and capital preservation.
+              Consistent, positive and uncorrelated returns with an emphasis on liquidity and capital
+              preservation.
             </p>
             <div className="mt-7 flex flex-wrap gap-x-7 gap-y-2 text-[14px] font-medium text-[#CDD8E2]">
               {["Investing since 2009", "European high-yield focus"].map(
@@ -111,7 +111,7 @@ export default function HomePage() {
               </Reveal>
               <Reveal variant="right" delay={120}>
                 <p className="mt-5 text-[18px] leading-relaxed text-inksoft">
-                  The team invests across the entire credit spectrum, with its primary focus on the
+                  The team invests across the entire corporate credit spectrum, with its primary focus on the
                   European high-yield markets, seeking consistent, positive and uncorrelated returns
                   in all market environments.
                 </p>

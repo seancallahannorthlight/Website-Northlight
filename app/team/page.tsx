@@ -75,12 +75,6 @@ export default function TeamPage() {
           <div className="mt-10">
             <InvestmentTeam />
           </div>
-          <Reveal className="mt-8">
-            <p className="max-w-2xl text-[14px] leading-relaxed text-muted">
-              The investment team is supported by a wider group across research, risk, operations and
-              investor relations. Full team details are available to prospective investors on request.
-            </p>
-          </Reveal>
         </div>
       </section>
 
