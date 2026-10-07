@@ -40,7 +40,7 @@ export default function HomePage() {
         {/* Lighter duotone so the bridge stays recognisable */}
         <div
           className="absolute inset-0 mix-blend-multiply"
-          style={{ background: "linear-gradient(160deg,#1f5793 0%,#002E5E 92%)", opacity: 0.62 }}
+          style={{ background: "linear-gradient(160deg,#33587E 0%,#002E5E 92%)", opacity: 0.62 }}
         />
         <div
           className="absolute inset-0"
@@ -268,7 +268,7 @@ export default function HomePage() {
             />
             <div
               className="pointer-events-none absolute inset-0 mix-blend-multiply"
-              style={{ background: "linear-gradient(155deg,#2a6aa8 0%,#002E5E 95%)", opacity: 0.4 }}
+              style={{ background: "linear-gradient(155deg,#33587E 0%,#002E5E 95%)", opacity: 0.4 }}
             />
             <span className="absolute bottom-3 right-3 bg-brand/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-white/80">
               Regent Street, London W1

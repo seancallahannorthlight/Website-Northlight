@@ -34,7 +34,7 @@ export function PageHero({
           />
           <div
             className="absolute inset-0 mix-blend-multiply"
-            style={{ background: "linear-gradient(150deg,#2a6aa8 0%,#002E5E 92%)", opacity: 0.64 }}
+            style={{ background: "linear-gradient(150deg,#33587E 0%,#002E5E 92%)", opacity: 0.64 }}
           />
           <div
             className="absolute inset-0"

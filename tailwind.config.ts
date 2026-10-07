@@ -5,14 +5,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0B1B2E",
+        ink: "#002E5E", // headings / dark text — PANTONE 295 C
         // Northlight blue — PANTONE 295 C (C100 M68 Y8 K52), from brand swatch
         brand: "#002E5E",
         navy: "#0A3A6E", // lighter 295 for hovers
         navy2: "#00264F", // deeper 295 for footer / panels
         navyline: "#1C4675",
-        steel: "#5E8DB8",
-        steeldeep: "#34618C",
+        steel: "#4D6D8E", // accent lines & dots — 295 at 70% (30% tint)
+        steeldeep: "#002E5E", // links & labels — PANTONE 295 C
         silver: "#9AA7B4",
         graphite: "#3E4E5E",
         mist: "#F3F5F7",

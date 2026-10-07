@@ -93,7 +93,7 @@ export function ProcessCircle() {
               key={d}
               d={d}
               fill="none"
-              stroke="#2A5478"
+              stroke="#33587E"
               strokeWidth="1.4"
               strokeLinecap="round"
               style={{
@@ -108,7 +108,7 @@ export function ProcessCircle() {
             <path
               key={`${h.x}-${h.y}`}
               d="M -1.9 -1.7 L 1.9 0 L -1.9 1.7 Z"
-              fill="#2A5478"
+              fill="#33587E"
               transform={`translate(${h.x.toFixed(2)} ${h.y.toFixed(2)}) rotate(${h.rot.toFixed(1)})`}
               style={{
                 opacity: drawn ? 1 : 0,
