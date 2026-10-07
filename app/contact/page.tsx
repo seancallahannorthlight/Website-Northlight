@@ -190,7 +190,7 @@ export default function ContactPage() {
                   By submitting you agree that Northlight may contact you regarding your enquiry. We
                   handle your information in line with our{" "}
                   <a href="/legal/privacy-policy" className="underline hover:text-ink">
-                    Privacy Policy
+                    Privacy Notice
                   </a>
                   .
                 </p>

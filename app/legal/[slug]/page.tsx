@@ -1,8 +1,38 @@
+import type React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getLegalDoc, legalDocs } from "@/lib/legal";
 import { firm } from "@/lib/content";
+
+// Inline formatting for legal copy: **bold**, email addresses and https links.
+function rich(text: string): React.ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*|https?:\/\/[^\s)]+[^\s).,;]|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} className="font-semibold text-ink">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    if (/^https?:\/\//.test(part)) {
+      return (
+        <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text-steeldeep underline hover:text-ink">
+          {part}
+        </a>
+      );
+    }
+    if (/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(part)) {
+      return (
+        <a key={i} href={`mailto:${part}`} className="text-steeldeep underline hover:text-ink">
+          {part}
+        </a>
+      );
+    }
+    return part;
+  });
+}
 
 export function generateStaticParams() {
   return legalDocs.map((d) => ({ slug: d.slug }));
@@ -81,7 +111,7 @@ export default function LegalPage({ params }: { params: { slug: string } }) {
                 if (block.type === "p") {
                   return (
                     <p key={i} className="text-[16px] leading-relaxed text-inksoft">
-                      {block.text}
+                      {rich(block.text)}
                     </p>
                   );
                 }
@@ -94,7 +124,7 @@ export default function LegalPage({ params }: { params: { slug: string } }) {
                           className="relative pl-5 text-[16px] leading-relaxed text-inksoft"
                         >
                           <span className="absolute left-0 top-[11px] h-px w-2.5 bg-steel" />
-                          {item}
+                          {rich(item)}
                         </li>
                       ))}
                     </ul>
@@ -102,6 +132,10 @@ export default function LegalPage({ params }: { params: { slug: string } }) {
                 }
                 if (block.type === "table") {
                   const numeric = (c: string) => /^[\d,.()%\-–\s]+$/.test(c);
+                  const allRows = [...block.rows, ...(block.total ? [block.total] : [])];
+                  const rightCol = block.head.map(
+                    (_, j) => j > 0 && allRows.every((r) => numeric(r[j] ?? "")),
+                  );
                   return (
                     <div key={i} className="overflow-x-auto border border-line">
                       <table className="w-full text-[15px]">
@@ -110,8 +144,8 @@ export default function LegalPage({ params }: { params: { slug: string } }) {
                             {block.head.map((c, j) => (
                               <th
                                 key={j}
-                                className={`px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-inksoft ${
-                                  j > 0 ? "text-right" : "text-left"
+                                className={`px-4 py-2.5 align-bottom text-[11px] font-semibold uppercase tracking-[0.12em] text-inksoft ${
+                                  rightCol[j] ? "text-right" : "text-left"
                                 }`}
                               >
                                 {c}
@@ -120,18 +154,18 @@ export default function LegalPage({ params }: { params: { slug: string } }) {
                           </tr>
                         </thead>
                         <tbody>
-                          {[...block.rows, ...(block.total ? [block.total] : [])].map((row, j) => {
+                          {allRows.map((row, j) => {
                             const isTotal = block.total && j === block.rows.length;
                             return (
                               <tr key={j} className="border-t border-line">
                                 {row.map((c, k) => (
                                   <td
                                     key={k}
-                                    className={`px-4 py-3 ${
-                                      k > 0 || numeric(c) ? "text-right tabular-nums" : "text-left"
-                                    } ${isTotal ? "font-semibold text-ink" : "text-inksoft"}`}
+                                    className={`px-4 py-3 align-top leading-relaxed ${
+                                      rightCol[k] ? "text-right tabular-nums" : "text-left"
+                                    } ${isTotal || (k === 0 && !rightCol[k] && row.length > 1 && !numeric(c)) ? "font-medium text-ink" : "text-inksoft"} ${isTotal ? "!font-semibold" : ""}`}
                                   >
-                                    {c}
+                                    {rich(c)}
                                   </td>
                                 ))}
                               </tr>
