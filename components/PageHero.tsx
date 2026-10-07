@@ -20,7 +20,7 @@ export function PageHero({
   imagePosition?: string;
 }) {
   return (
-    <section className="sticky top-0 -z-10 min-h-[62vh] overflow-hidden bg-ink text-white">
+    <section className="sticky top-0 -z-10 min-h-[62vh] overflow-hidden bg-brand text-white">
       {image ? (
         <>
           <div
@@ -34,20 +34,20 @@ export function PageHero({
           />
           <div
             className="absolute inset-0 mix-blend-multiply"
-            style={{ background: "linear-gradient(150deg,#2a6aa8 0%,#0B1B2E 92%)", opacity: 0.64 }}
+            style={{ background: "linear-gradient(150deg,#2a6aa8 0%,#002E5E 92%)", opacity: 0.64 }}
           />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(90deg,rgba(8,21,36,0.86) 0%,rgba(8,21,36,0.55) 55%,rgba(11,27,46,0.28) 100%)",
+                "linear-gradient(90deg,rgba(0,32,66,0.86) 0%,rgba(0,32,66,0.55) 55%,rgba(0,46,94,0.28) 100%)",
             }}
           />
         </>
       ) : (
         <>
           <CableField className="absolute inset-0 h-full w-full opacity-50" />
-          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand via-brand/80 to-brand/30" />
         </>
       )}
 

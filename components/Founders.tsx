@@ -29,7 +29,7 @@ function FounderCard({ m, variant }: { m: TeamMember; variant: "left" | "right" 
           ) : (
             <div
               className="flex h-full w-full items-center justify-center"
-              style={{ background: "linear-gradient(160deg,#1d3b58,#0E2138)" }}
+              style={{ background: "linear-gradient(160deg,#0A3A6E,#00264F)" }}
             >
               <span className="font-serif text-4xl font-semibold text-white/85">{initials}</span>
             </div>

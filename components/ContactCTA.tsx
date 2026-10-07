@@ -3,7 +3,7 @@ import { firm } from "@/lib/content";
 
 export function ContactCTA() {
   return (
-    <section className="bg-ink text-white">
+    <section className="bg-brand text-white">
       <div className="container-nl grid items-center gap-10 py-16 md:grid-cols-[1.2fr_1fr] md:py-20">
         <div>
           <Eyebrow light>Contact</Eyebrow>

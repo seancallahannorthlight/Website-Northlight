@@ -44,7 +44,7 @@ export default function TeamPage() {
       </section>
 
       {/* Team in numbers — slim navy stripe between the partners and the wider team */}
-      <section className="border-b border-navyline bg-ink text-white">
+      <section className="border-b border-navyline bg-brand text-white">
         <div className="container-nl py-9 md:py-11">
           <dl className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3">
             {teamStatsAnim.map((fact, i) => (

@@ -4,7 +4,7 @@ type Variant = "primary" | "ghost" | "ondark" | "ondark-solid";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-ink text-white border border-ink hover:bg-navy",
+    "bg-brand text-white border border-brand hover:bg-navy",
   ghost:
     "bg-transparent text-ink border border-[#B7C1CB] hover:border-ink",
   ondark:

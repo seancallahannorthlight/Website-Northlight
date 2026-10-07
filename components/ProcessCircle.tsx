@@ -118,7 +118,7 @@ export function ProcessCircle() {
           ))}
           {/* continuously orbiting marker — keeps the cycle "alive" */}
           <g className="nl-orbit">
-            <circle cx={CENTER} cy={CENTER - R} r="1.9" fill="#0B1B2E" />
+            <circle cx={CENTER} cy={CENTER - R} r="1.9" fill="#002E5E" />
           </g>
         </svg>
 
@@ -140,7 +140,7 @@ export function ProcessCircle() {
                 height: isActive ? "3.6rem" : "3rem",
                 width: isActive ? "3.6rem" : "3rem",
                 fontSize: isActive ? "1.15rem" : "0.95rem",
-                background: isActive ? "#1c3b5c" : "#0B1B2E",
+                background: isActive ? "#0A3A6E" : "#002E5E",
                 transform: "translate(-50%,-50%)",
                 boxShadow: isActive ? "0 0 0 6px rgba(63,108,148,0.18)" : "none",
               }}

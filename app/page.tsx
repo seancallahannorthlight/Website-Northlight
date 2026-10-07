@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <>
       {/* ---------- Hero (pinned; content scrolls up over it) ---------- */}
-      <section className="sticky top-0 z-0 flex min-h-[88vh] items-center overflow-hidden bg-ink text-white">
+      <section className="sticky top-0 z-0 flex min-h-[88vh] items-center overflow-hidden bg-brand text-white">
         <div
           className="absolute inset-0"
           style={{
@@ -40,13 +40,13 @@ export default function HomePage() {
         {/* Lighter duotone so the bridge stays recognisable */}
         <div
           className="absolute inset-0 mix-blend-multiply"
-          style={{ background: "linear-gradient(160deg,#1f5793 0%,#0B1B2E 92%)", opacity: 0.62 }}
+          style={{ background: "linear-gradient(160deg,#1f5793 0%,#002E5E 92%)", opacity: 0.62 }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg,rgba(8,21,36,0.9) 0%,rgba(8,21,36,0.52) 44%,rgba(11,27,46,0.08) 100%)",
+              "linear-gradient(90deg,rgba(0,32,66,0.9) 0%,rgba(0,32,66,0.52) 44%,rgba(0,46,94,0.08) 100%)",
           }}
         />
         <div className="container-nl relative z-10 w-full py-28">
@@ -132,7 +132,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------- Statement numbers (full-width band) ---------- */}
-      <section className="border-b border-navyline bg-ink text-white">
+      <section className="border-b border-navyline bg-brand text-white">
         <div className="container-nl py-14 md:py-16">
           <dl className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3">
             {bandStats.map((fact, i) => (
@@ -192,7 +192,7 @@ export default function HomePage() {
            Removed per pre-launch feedback (2026-07-22). Kept but disabled for easy restore:
            change `false` to `true` below to bring the section back. */}
       {false && (
-      <section className="border-b border-navyline bg-ink text-white">
+      <section className="border-b border-navyline bg-brand text-white">
         <div className="container-nl py-20 md:py-24">
           <Reveal className="flex flex-wrap items-end justify-between gap-4">
             <div className="max-w-xl">
@@ -205,7 +205,7 @@ export default function HomePage() {
           </Reveal>
           <div className="mt-12 grid gap-px overflow-hidden border border-navyline bg-navyline sm:grid-cols-2 lg:grid-cols-4">
             {process.map((step, i) => (
-              <Reveal key={step.title} delay={i * 90} className="bg-ink p-7">
+              <Reveal key={step.title} delay={i * 90} className="bg-brand p-7">
                 <span className="block h-px w-8 bg-steel" />
                 <h3 className="mt-4 text-lg text-white">{step.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-[#9DB0C2]">{step.short}</p>
@@ -268,9 +268,9 @@ export default function HomePage() {
             />
             <div
               className="pointer-events-none absolute inset-0 mix-blend-multiply"
-              style={{ background: "linear-gradient(155deg,#2a6aa8 0%,#0B1B2E 95%)", opacity: 0.4 }}
+              style={{ background: "linear-gradient(155deg,#2a6aa8 0%,#002E5E 95%)", opacity: 0.4 }}
             />
-            <span className="absolute bottom-3 right-3 bg-ink/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-white/80">
+            <span className="absolute bottom-3 right-3 bg-brand/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-white/80">
               Regent Street, London W1
             </span>
           </div>

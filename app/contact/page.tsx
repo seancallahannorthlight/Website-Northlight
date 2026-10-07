@@ -170,7 +170,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="mt-6 w-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-8"
+                  className="mt-6 w-full bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-8"
                 >
                   {status === "submitting" ? "Sending…" : "Submit enquiry"}
                 </button>
@@ -209,7 +209,7 @@ export default function ContactPage() {
                   <button
                     type="button"
                     onClick={() => setShowForm(true)}
-                    className="group inline-flex items-center gap-2.5 bg-ink px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-navy"
+                    className="group inline-flex items-center gap-2.5 bg-brand px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-navy"
                   >
                     Start an enquiry
                     <ArrowRight />

@@ -62,7 +62,7 @@ export function StrategyTabs() {
       {/* Sticky tab bar */}
       <nav
         aria-label="Strategies"
-        className="sticky top-[68px] z-40 border-b border-navyline bg-ink"
+        className="sticky top-[68px] z-40 border-b border-navyline bg-brand"
       >
         <div className="container-nl flex gap-2 overflow-x-auto">
           {strategies.map((item, i) => (
@@ -86,9 +86,9 @@ export function StrategyTabs() {
       {/* Panel */}
       <div key={active} className="draftb-panel">
         {/* Navy identity band */}
-        <section className="relative overflow-hidden bg-ink text-white">
+        <section className="relative overflow-hidden bg-brand text-white">
           <CableField className="absolute right-0 top-0 h-full w-2/3 opacity-30" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand via-brand/85 to-brand/40" />
           <div className="container-nl relative z-10 pb-28 pt-16 md:pb-32 md:pt-20">
             <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-silver">
               {s.tag}
@@ -104,7 +104,7 @@ export function StrategyTabs() {
         {/* Light content — lifted into an overlapping card for a clean seam */}
         <section className="bg-mist">
           <div className="container-nl">
-            <div className="relative z-10 -mt-16 border border-line bg-white p-8 shadow-[0_16px_50px_-28px_rgba(11,27,46,0.55)] md:-mt-20 md:p-12">
+            <div className="relative z-10 -mt-16 border border-line bg-white p-8 shadow-[0_16px_50px_-28px_rgba(0,46,94,0.55)] md:-mt-20 md:p-12">
               <div className="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:gap-16">
                 {/* Left — featured metric + key facts */}
                 <div>

@@ -38,7 +38,7 @@ export function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 text-white transition-all duration-300 ease-out ${
-        transparent ? "translate-y-6 bg-transparent" : "translate-y-0 bg-ink shadow-sm shadow-black/20"
+        transparent ? "translate-y-6 bg-transparent" : "translate-y-0 bg-brand shadow-sm shadow-black/20"
       }`}
     >
       <div className="container-nl flex h-[84px] items-center justify-between">
@@ -88,7 +88,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-navyline bg-ink md:hidden" aria-label="Mobile">
+        <nav className="border-t border-navyline bg-brand md:hidden" aria-label="Mobile">
           <div className="container-nl flex flex-col py-2">
             {mainNav.map((item) => (
               <Link

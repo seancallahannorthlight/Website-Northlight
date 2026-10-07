@@ -6,9 +6,11 @@ const config: Config = {
     extend: {
       colors: {
         ink: "#0B1B2E",
-        navy: "#102A44",
-        navy2: "#0E2138",
-        navyline: "#243F5A",
+        // Northlight blue — PANTONE 295 C (C100 M68 Y8 K52), from brand swatch
+        brand: "#002E5E",
+        navy: "#0A3A6E", // lighter 295 for hovers
+        navy2: "#00264F", // deeper 295 for footer / panels
+        navyline: "#1C4675",
         steel: "#5E8DB8",
         steeldeep: "#34618C",
         silver: "#9AA7B4",
