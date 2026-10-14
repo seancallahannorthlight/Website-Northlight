@@ -27,7 +27,7 @@ export const legalNav = [
   { href: "/legal/mifidpru-8-disclosure", label: "MIFIDPRU 8 Disclosure" },
   { href: "/legal/privacy-policy", label: "Privacy Notice" },
   { href: "/legal/financial-promotions-disclaimer", label: "Financial Promotions Disclaimer" },
-  { href: "/legal/email-disclaimer", label: "Email Disclaimer" },
+  { href: "/legal/disclaimer", label: "Disclaimer" },
 ];
 
 export const firmFacts = [
