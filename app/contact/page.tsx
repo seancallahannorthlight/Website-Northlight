@@ -127,7 +127,8 @@ export default function ContactPage() {
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   <Field label="Full name" name="name" />
                   <Field label="Organisation" name="organisation" />
-                  <Field label="Email" name="email" type="email" className="sm:col-span-2" />
+                  <Field label="Email" name="email" type="email" />
+                  <Field label="Country" name="country" />
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="investorType"

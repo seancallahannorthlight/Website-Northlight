@@ -26,7 +26,7 @@ export default function TeamPage() {
       <PageHero
         eyebrow="Our team"
         title="Led by its founders"
-        intro="Northlight is led by founding portfolio managers Cyril Armleder and Shahar Zer, supported by a diverse, experienced investment team."
+        intro="Northlight is led by founding portfolio managers Cyril Armleder and Shahar Zer, supported by a diverse, experienced investment, operational and investor relations team."
         image="/heroes/viaduct.jpg"
         imagePosition="center 42%"
       />

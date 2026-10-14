@@ -168,6 +168,9 @@ export function StrategyTabs() {
                       </li>
                     ))}
                   </ul>
+                  {s.footnote && (
+                    <p className="mt-4 text-[13px] leading-relaxed text-muted">{s.footnote}</p>
+                  )}
                 </div>
               </div>
 

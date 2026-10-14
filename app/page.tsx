@@ -56,8 +56,8 @@ export default function HomePage() {
               A London-based investment manager specialising in European corporate credit.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#D2DCE5]">
-              Consistent, positive and uncorrelated returns with an emphasis on liquidity and capital
-              preservation.
+              Seeking consistent returns across market cycles, with an emphasis on liquidity and
+              capital preservation.
             </p>
             <div className="mt-7 flex flex-wrap gap-x-7 gap-y-2 text-[14px] font-medium text-[#CDD8E2]">
               {["Investing since 2009", "European high-yield focus"].map(
@@ -96,7 +96,7 @@ export default function HomePage() {
               <Eyebrow>Who we are</Eyebrow>
               <Reveal variant="left" className="mt-6">
                 <h2 className="text-4xl font-medium leading-[1.08] text-ink md:text-[46px]">
-                  A European asset manager with its own ethos
+                  European credit manager guided by Purpose, driven by Performance.
                 </h2>
               </Reveal>
             </div>
@@ -104,16 +104,13 @@ export default function HomePage() {
               <Reveal variant="right">
                 <p className="text-[18px] leading-relaxed text-inksoft">
                   Northlight was founded in 2009 by portfolio managers Cyril Armleder and Shahar Zer,
-                  after multi-decade sell-side and buy-side careers, with the goal of building a
-                  European asset manager with a distinct ethos — one focused on liquidity-adjusted
-                  risk and return.
+                  after multi-decade sell-side and buy-side careers.
                 </p>
               </Reveal>
               <Reveal variant="right" delay={120}>
                 <p className="mt-5 text-[18px] leading-relaxed text-inksoft">
                   The team invests across the entire corporate credit spectrum, with its primary focus on the
-                  European high-yield markets, seeking consistent, positive and uncorrelated returns
-                  in all market environments.
+                  European high-yield markets, seeking consistent returns across market cycles.
                 </p>
               </Reveal>
               <Reveal variant="right" delay={220}>

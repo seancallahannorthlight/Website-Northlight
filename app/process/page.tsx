@@ -28,10 +28,10 @@ export default function ProcessPage() {
           <Reveal variant="left" className="mb-12 max-w-2xl">
             <Eyebrow>How we invest</Eyebrow>
             <h2 className="mt-4 text-3xl leading-tight text-ink text-balance md:text-[34px]">
-              Consistent, positive, uncorrelated returns — through disciplined repetition.
+              Consistency through repetition. Performance through discipline.
             </h2>
             <p className="mt-4 text-[16px] leading-relaxed text-inksoft">
-              One continuous loop, with capital preservation built into every stage.
+              One continuous loop, with focus on positive returns and capital preservation at each stage.
             </p>
           </Reveal>
           <Reveal>

@@ -118,7 +118,7 @@ export const processCycle = [
   {
     n: "01",
     title: "Idea Generation",
-    summary: "Sourcing opportunities across European credit.",
+    summary: "Sourcing opportunities across European corporate credit.",
     detail: [
       "Screening the European high-yield and broader credit universe",
       "Catalyst- and event-driven idea sourcing",
@@ -185,6 +185,7 @@ export type Strategy = {
   headline: { label: string; value: string };
   meta: { label: string; value: string }[];
   points: string[];
+  footnote?: string;
   shareClasses?: ShareClass[];
 };
 
@@ -196,8 +197,8 @@ export const strategies: Strategy[] = [
     name: "Northlight European Fundamental Credit Fund",
     structure: "Long / short",
     summary:
-      "Our flagship strategy — a long/short book across European credit, seeking consistent, positive returns with a firm emphasis on capital preservation.",
-    headline: { label: "Focus", value: "Absolute, uncorrelated returns" },
+      "A long/short European credit strategy seeking consistent returns across market cycles, with capital preservation at the core of the investment approach.",
+    headline: { label: "Focus", value: "Consistent returns across market cycles" },
     meta: [
       { label: "Structure", value: "Cayman" },
       { label: "Track record", value: "16-year" },
@@ -208,9 +209,11 @@ export const strategies: Strategy[] = [
       "Idiosyncratic, catalyst-driven opportunities sourced bottom-up",
       "Systematic macro-overlay intended to preserve capital",
       "Balanced long and short — roughly two-thirds long, one-third short",
-      "Positive calendar-year performance in 15 of the last 16 years (USD I share class)",
+      "Positive performance* in 15 of the 16 years since inception",
+      "Low correlation to broader credit markets",
       "Historically lower drawdowns than the European High Yield market",
     ],
+    footnote: "* USD I share class.",
   },
   {
     slug: "european-credit-opportunities",
@@ -220,16 +223,15 @@ export const strategies: Strategy[] = [
     structure: "Long / short",
     summary:
       "The flagship investment philosophy in a regulated, onshore UCITS wrapper — the same fundamental, event-driven approach, more widely accessible.",
-    headline: { label: "Target", value: "High single-digit returns" },
+    headline: { label: "Target", value: "Medium to high single-digit returns" },
     meta: [
       { label: "Structure", value: "UCITS" },
       { label: "Track record", value: "Since 2019" },
       { label: "Liquidity", value: "Weekly" },
-      { label: "Target", value: "High single-digit returns" },
+      { label: "Target", value: "Medium to high single-digit returns" },
     ],
     points: [
-      "The flagship investment philosophy delivered in a regulated UCITS structure",
-      "Primarily bonds, with the same fundamental, event-driven approach",
+      "The same fundamental, event-driven approach, in a more diversified and more liquid corporate bond portfolio with a higher average rating",
       "Daily position transparency",
       "Suitable for investors requiring a regulated European vehicle",
     ],
@@ -275,7 +277,7 @@ export const strategies: Strategy[] = [
     name: "Co-Investments",
     structure: "By invitation",
     summary:
-      "The team's highest-conviction ideas, offered to investors alongside the funds.",
+      "Selective access to high-conviction opportunities arising from Northlight’s investment strategy, offered alongside its core funds.",
     headline: { label: "Approach", value: "Concentrated & high-conviction" },
     meta: [
       { label: "Horizon", value: "Multi-year" },
@@ -284,7 +286,6 @@ export const strategies: Strategy[] = [
     points: [
       "Concentrated exposure across a small number of positions",
       "Structured around specific catalysts and events",
-      "Offered selectively to aligned investors",
     ],
   },
 ];

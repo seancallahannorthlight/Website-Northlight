@@ -60,8 +60,9 @@ function Kicker({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Characteristics({ points }: { points: string[] }) {
+function Characteristics({ points, footnote }: { points: string[]; footnote?: string }) {
   return (
+    <>
     <ul className="space-y-4">
       {points.map((point) => (
         <li key={point} className="relative pl-5 text-[16px] leading-relaxed text-inksoft">
@@ -70,6 +71,8 @@ function Characteristics({ points }: { points: string[] }) {
         </li>
       ))}
     </ul>
+    {footnote && <p className="mt-4 text-[13px] leading-relaxed text-muted">{footnote}</p>}
+    </>
   );
 }
 
@@ -221,7 +224,7 @@ function VehicleRow({
                 <div>
                   <h4 className="font-serif text-lg font-semibold text-navy">Characteristics</h4>
                   <div className="mt-5">
-                    <Characteristics points={s.points} />
+                    <Characteristics points={s.points} footnote={s.footnote} />
                   </div>
                 </div>
               </div>
@@ -325,7 +328,7 @@ export function StrategyShowcase() {
             <Reveal variant="right" delay={80}>
               <h3 className="font-serif text-xl font-semibold text-navy">Characteristics</h3>
               <div className="mt-6">
-                <Characteristics points={flagship.points} />
+                <Characteristics points={flagship.points} footnote={flagship.footnote} />
               </div>
             </Reveal>
           </div>
@@ -341,8 +344,8 @@ export function StrategyShowcase() {
               The same investment philosophy, different investment vehicles
             </h2>
             <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-inksoft">
-              The flagship approach, expressed in structures designed for different investors and
-              objectives. Open any vehicle to unfold the detail.
+              One investment approach, available through a range of structures designed to meet
+              different investor requirements and objectives. Select a vehicle to learn more.
             </p>
           </Reveal>
 

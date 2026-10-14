@@ -16,7 +16,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Northlight"
-        title="A European asset manager with its own ethos"
+        title="European credit manager guided by Purpose, driven by Performance."
         intro="Founded in 2009 with a focus on liquidity-adjusted risk and return."
         image="/heroes/pylon.jpg"
         imagePosition="center"
@@ -28,18 +28,15 @@ export default function AboutPage() {
           <div>
             <Eyebrow>Who we are</Eyebrow>
             <Reveal variant="left" className="mt-4">
-              <h2 className="text-3xl text-ink">Built by credit specialists, for credit investing</h2>
+              <h2 className="text-3xl text-ink">Credit specialists dedicated to credit investing</h2>
               <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-inksoft">
                 Northlight was founded in 2009 by portfolio managers Cyril Armleder and Shahar Zer,
-                following their multi-decade sell-side and buy-side careers, with the goal of
-                establishing a European asset manager with its own ethos — one with a focus on
-                liquidity-adjusted risk and return.
+                following their multi-decade sell-side and buy-side careers.
               </p>
               <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-inksoft">
                 The team invests across the entire corporate credit spectrum, with its primary focus on the
-                European high-yield markets. The firm seeks to generate consistent, positive and
-                uncorrelated returns across all market environments, with an emphasis on liquidity
-                and capital preservation.
+                European high-yield markets. The firm seeks to generate consistent returns across market cycles, with an
+                emphasis on liquidity and capital preservation.
               </p>
             </Reveal>
           </div>
@@ -123,7 +120,7 @@ export default function AboutPage() {
               },
               {
                 h: "Institutional operating framework",
-                p: "Independent governance, oversight and controls across the fund range, built to the standards institutional allocators expect.",
+                p: "Robust governance, independent oversight and disciplined controls across our fund range, reflecting the standards expected by institutional investors.",
               },
             ].map((item) => (
               <Reveal key={item.h} className="border-l-2 border-graphite bg-mist p-6">
