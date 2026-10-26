@@ -6,6 +6,7 @@ import { Eyebrow } from "@/components/ui";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Founders } from "@/components/Founders";
 import { InvestmentTeam } from "@/components/InvestmentTeam";
+import { businessTeam } from "@/lib/content";
 
 // Team stats — the two metrics count up on first view; the year stays static.
 const teamStatsAnim: { value: React.ReactNode; label: string }[] = [
@@ -74,6 +75,21 @@ export default function TeamPage() {
           </Reveal>
           <div className="mt-10">
             <InvestmentTeam />
+          </div>
+        </div>
+      </section>
+
+      {/* Business development, investor relations, risk and operations */}
+      <section className="border-b border-line bg-white">
+        <div className="container-nl py-20">
+          <Reveal>
+            <Eyebrow>Beyond the investment team</Eyebrow>
+            <h2 className="mt-4 text-3xl text-ink md:text-[34px]">
+              Business Development, Investor Relations and Risk Management
+            </h2>
+          </Reveal>
+          <div className="mt-10">
+            <InvestmentTeam members={businessTeam} />
           </div>
         </div>
       </section>

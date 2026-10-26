@@ -1,18 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { investmentTeam } from "@/lib/content";
+import { investmentTeam, type Analyst } from "@/lib/content";
 
 // The wider investment team as an elegant accordion: each person shows a name,
 // role · focus and how long they've been at Northlight, and unfolds a short bio
 // plus languages on click. No portraits — a clean, text-led treatment.
-export function InvestmentTeam() {
+export function InvestmentTeam({ members = investmentTeam }: { members?: Analyst[] }) {
   const [open, setOpen] = useState<string | null>(null);
   const toggle = (name: string) => setOpen((cur) => (cur === name ? null : name));
 
   return (
     <ul className="border-t border-line">
-      {investmentTeam.map((m) => {
+      {members.map((m) => {
         const isOpen = open === m.name;
         return (
           <li key={m.name} className={`border-b border-line transition-colors ${isOpen ? "bg-white" : ""}`}>
@@ -31,7 +31,7 @@ export function InvestmentTeam() {
               <div>
                 <h3 className="font-serif text-xl leading-snug text-ink md:text-[23px]">{m.name}</h3>
                 <p className="mt-1 text-[13px] font-semibold uppercase tracking-[0.06em] text-steeldeep">
-                  {m.role} · {m.focus}
+                  {m.focus ? `${m.role} · ${m.focus}` : m.role}
                 </p>
               </div>
               <span

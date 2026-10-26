@@ -318,10 +318,35 @@ export const team: TeamMember[] = [
 export type Analyst = {
   name: string;
   role: string;
-  focus: string;
+  focus?: string;
   bio: string;
   photo?: string;
 };
+
+// Business development, investor relations, risk and operations — from the
+// Biographies page (p.40) of the Northlight Presentation (May 2026), bios verbatim.
+export const businessTeam: Analyst[] = [
+  {
+    name: "Nicolas Mueller",
+    role: "Partner, Head of Business Development and Chief Compliance Officer",
+    bio: "Nicolas is a Partner and member of the Management Committee for Northlight Group. Prior to joining Northlight in 2012, he was a Partner, co-founder and Chief Operating Officer of Merian Capital Partners LLP (2008-2011), a European Equity Long Short Fund. Nicolas also held various senior positions within Man Group Plc. (2002-2007) where he was Head of Managers’ Transactions at Man Global Strategies (MGS), responsible for the structuring and implementation of MGS’s USD 10 billion new affiliation initiatives, and a member of MGS’s Management Committee (2004-2007), in addition to serving as Head of International Offices & Joint Ventures at RMF Investment Group (2002-2004). In addition, Nicolas was a Senior Associate at Wiederkehr Forster in Zürich (1999-2002), with Mayer, Brown and Platt in New York (1998-1999), Crédit Lyonnais (1996-1997), EY (1993-1995) and De Pfyffer & Ass. (1990-1992) in Geneva. Nicolas is also co-founder of the Make-A-Wish Foundation of Switzerland. Nicolas holds a J.D. from the University of Geneva, an LL.M. from New York University and has been admitted to the New York, Zürich and Geneva bars. He is fluent in French, English and German.",
+  },
+  {
+    name: "Sean Callahan",
+    role: "Head of Distribution",
+    bio: "Sean is Head of Distribution and a member of the Management Committee for Northlight Group. Prior to joining Northlight in 2023, Sean was a senior member of the Business Development and Investor Relations team at Mudrick Capital, an event-driven distressed credit fund based in New York, where he was responsible for raising capital across client channels in North America (2020-2022). Prior to Mudrick Capital, Sean spent over ten years at BlackRock, Inc. where he was responsible for business development and investor relations for some of the firm’s largest institutional clients. Sean holds a degree in Economics from Boston College.",
+  },
+  {
+    name: "Brian O’Callaghan",
+    role: "Chief Risk Officer",
+    bio: "Brian O’Callaghan is Chief Risk Officer at Northlight Group and has been involved in various capacities with the firm since 2019. Brian has extensive experience as a CRO or equivalent for investment managers running funds across a variety of strategies, including HY Credit Long/Short, ABS Credit, Equity Long/Short, Commodities, Global Macro and Private Equity. Brian has also served and continues to serve as a Non-executive Director for a range of financial services companies, including hedge or private equity fund managers and hedge funds. Prior to focusing on financial risk management and governance in 2012, Brian spent more than a decade as a CEO or COO of investment management firms. He was previously CEO of Compass Asset Management (2010-2012), which was based in Almaty, Kazakhstan. Compass focused on investing in Central Asia through hybrid funds whose mandates included both public markets and private equity. Before joining Compass, Brian was CEO of Renaissance Investment Management (UK) Ltd, part of the emerging markets-focused Renaissance Group. Prior to his appointment as CEO, Brian served as the company’s COO. Before joining Renaissance (2008-2010), Brian co-founded and spent five years as the COO of Holte Capital (2002-2006), a London based, market neutral, special situations hedge fund that focused on Western Europe. Brian began his career in strategy consulting with SJH & Co, initially in Boston, USA, and then later in Warsaw, Poland. Brian is a Canadian and Irish dual national and resident of Portugal. He holds current approvals from the Malta Financial Services Authority (MFSA) and has previously held approvals for a variety of control functions from the UK’s Financial Conduct Authority (FCA) and Dubai Financial Services Authority (DFSA). Brian holds a Bachelor of Arts degree in economics from Harvard University and is a Certified Professional Risk Manager (PRM) with the Professional Risk Managers’ International Association (PRMIA).",
+  },
+  {
+    name: "Shane Quinn",
+    role: "Head of Operations",
+    bio: "Shane is the Head of Operations at Northlight Group, a role he has held since joining the firm in 2020. Prior to this, he was with Oceanwood Capital Management from 2019 to 2020. From 2013 to 2019, Shane was part of the Middle Office team at Fideuram Asset Management. Earlier in his career, he held roles in Trade Support at Bank of America and Merrill Lynch, as well as in Settlements at Scotia Capital. Shane holds a Bachelor of Commerce degree from the National University of Ireland, Galway.",
+  },
+];
 
 export const investmentTeam: Analyst[] = [
   {
