@@ -254,13 +254,13 @@ export const strategies: Strategy[] = [
     tag: "Bespoke · Insurance",
     short: "Insurance",
     name: "Insurance Long-Only Mandates",
-    structure: "Segregated mandate",
+    structure: "Segregated mandates",
     summary:
       "A portfolio built for insurance capital, drawing on income and short duration to work capital efficiently.",
     headline: { label: "Style", value: "Long-only" },
     meta: [
       { label: "Style", value: "Long-only" },
-      { label: "Format", value: "Segregated mandate" },
+      { label: "Format", value: "Segregated mandates" },
       { label: "Focus", value: "Income · short duration" },
     ],
     points: [
