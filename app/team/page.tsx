@@ -67,7 +67,7 @@ export default function TeamPage() {
         <div className="container-nl py-20">
           <Reveal>
             <Eyebrow>Investment team</Eyebrow>
-            <h2 className="mt-4 text-3xl text-ink md:text-[34px]">The research team</h2>
+            <h2 className="mt-4 text-3xl text-ink md:text-[34px]">The Research Team</h2>
             <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-inksoft">
               Backgrounds spanning high-yield, leveraged finance and distressed
               credit, with experience across leading global banks and credit funds.
